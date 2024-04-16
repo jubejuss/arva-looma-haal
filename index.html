@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="et">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Loomade Sobitamismäng</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="game-area">
+            <div class="left">
+                <div
+                    class="description"
+                    id="mau"
+                    data-animal="cat"
+                    draggable="true"
+                >
+                </div>
+                <div
+                    class="description"
+                    id="woof"
+                    data-animal="dog"
+                    draggable="true"
+                >
+                </div>
+                <div
+                    class="description"
+                    id="oink"
+                    data-animal="pig"
+                    draggable="true"
+                >
+                </div>
+            </div>
+            <div class="animals">
+                <div class="animal-container">
+                    <img
+                        src="img/pig.jpg"
+                        alt="Siga"
+                        id="pig"
+                        class="animal"
+                        draggable="true"
+                    />
+                </div>
+                <div class="animal-container">
+                    <img
+                        src="img/dog.jpg"
+                        alt="Koer"
+                        id="dog"
+                        class="animal"
+                        draggable="true"
+                    />
+                </div>
+                <div class="animal-container">
+                    <img
+                        src="img/cat.jpg"
+                        alt="Kass"
+                        id="cat"
+                        class="animal"
+                        draggable="true"
+                    />
+                </div>
+                <div class="animal-container">
+                    <img
+                        src="img/cow.jpg"
+                        alt="Lehm"
+                        id="cow"
+                        class="animal"
+                        draggable="true"
+                    />
+                </div>
+                <div class="animal-container">
+                    <img
+                        src="img/horse.jpg"
+                        alt="Horse"
+                        id="horse"
+                        class="animal"
+                        draggable="true"
+                    />
+                </div>
+                <div class="animal-container">
+                    <img
+                        src="img/sheep.jpg"
+                        alt="Lammas"
+                        id="sheep"
+                        class="animal"
+                        draggable="true"
+                    />
+                </div>
+            </div>
+            <div class="right">
+                <div
+                    class="description"
+                    id="ihaa"
+                    data-animal="horse"
+                    draggable="true"
+                >
+                </div>
+                <div
+                    class="description"
+                    id="mee"
+                    data-animal="sheep"
+                    draggable="true"
+                >
+                </div>
+                <div
+                    class="description"
+                    id="muu"
+                    data-animal="cow"
+                    draggable="true"
+                >
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+        <button id="stop-all-sounds" onclick="stopSound()">
+            Peata kõik helid
+        </button>
+        <button id="reset-button" onclick="resetPositions()">
+            Taasta algseis
+        </button>
+        </div>
+        <!-- Custom modal for alerts -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <p id="modal-message"></p>
+            </div>
+        </div>
+
+        <script src="game.js"></script>
+    </body>
+</html>

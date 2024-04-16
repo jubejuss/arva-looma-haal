@@ -1,0 +1,139 @@
+body, button {
+
+        font-family: "Bevan", serif;
+        font-weight: 400;
+        font-style: normal;  
+        letter-spacing: 0.02rem;
+}
+button {
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(189, 189, 189);
+}
+#stop-all-sounds {
+    background: #3a575c;
+    color: white;
+}
+#stop-all-sounds:hover {
+    background: #324b50;
+}
+
+#game-area {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: start;
+}
+.description {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    cursor: grab;
+    object-fit: contain;
+    z-index: 1;
+}
+.animal-container {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.animal {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 2rem 4rem;
+    border-radius: 5px;
+    position: relative;
+}
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+#stop-all-sounds, #reset-button {
+    margin: 20px;
+}
+
+
+.animals {
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+.left, .right {
+    display: block;
+    width: 220px;
+}
+
+#oink {
+    background: url(img/pig-text.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+}
+#woof {
+    background: url(img/dog-text.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+}
+#mau {
+    background: url(img/cat-text.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+}
+#ihaa {
+    background: url(img/horse-text.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+}
+#ihaa {
+    background: url(img/horse-text.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+}
+#mee {
+    background: url(img/sheep-text.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+}
+#muu {
+    background: url(img/cow-text.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center 70%;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
