@@ -1,13 +1,13 @@
-body, button {
-
-        font-family: "Bevan", serif;
-        font-weight: 400;
-        font-style: normal;  
-        letter-spacing: 0.02rem;
+body,
+button {
+    font-family: "Bevan", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.02rem;
 }
 button {
     padding: 1rem 2rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -29,24 +29,24 @@ button:hover {
     align-items: start;
 }
 .description {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    padding: 10px;
+    width: 12rem;
+    height: 12rem;
+    margin: .5rem;
+    padding: .5rem;
     cursor: grab;
     object-fit: contain;
     z-index: 1;
 }
 .animal-container {
-    margin: 10px;
+    margin: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 .animal {
-    width: 200px;
-    height: 200px;
+    width: 12rem;
+    height: 12rem;
     cursor: pointer;
 }
 .modal {
@@ -64,30 +64,31 @@ button:hover {
 .modal-content {
     background: white;
     padding: 2rem 4rem;
-    border-radius: 5px;
+    border-radius: .25rem;
     position: relative;
 }
 .close-button {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: .25rem;
+    right: .5rem;
     cursor: pointer;
 }
-#stop-all-sounds, #reset-button {
-    margin: 20px;
+#stop-all-sounds,
+#reset-button {
+    margin: 1.25rem;
 }
-
 
 .animals {
     display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(3, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
-.left, .right {
+.left,
+.right {
     display: block;
-    width: 220px;
+    width: 14rem;
 }
 
 #oink {
