@@ -4,7 +4,7 @@ body {
 body,
 button {
     font-family: "Bevan", serif;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
     letter-spacing: 0.02rem;
     text-align: center;
@@ -45,6 +45,9 @@ button:hover {
     background-position: center 80%;
     background-repeat: no-repeat;
     background-size: 80%;
+}
+h1,h2,h3 {
+    font-weight: 400;
 }
 h1 {
     color: #4a4b49;
