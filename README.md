@@ -120,7 +120,7 @@ window.onclick = function(event) {
     }
 }
 ```
-### Mida miski koodijupp teeb
+### Mida miski koodijupp teeb?
 `document.addEventListener('DOMContentLoaded', function() { ... });` - See käivitab funktsiooni, kui HTML-dokument on täielikult laaditud ja parsitud.  
 `document.querySelectorAll('.description').forEach(item => { ... });` - See valib kõik elemendid, millel on klass "description", ja rakendab igaühele sündmuskuulajaid.  
 `item.addEventListener('dragstart', dragStart);` - See lisab "dragstart" sündmuskuulaja iga "description" elemendile, mis käivitub, kui elementi hakatakse lohistama.  
