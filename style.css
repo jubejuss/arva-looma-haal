@@ -4,6 +4,7 @@ button {
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.02rem;
+    text-align: center;
 }
 button {
     padding: 1rem 2rem;
@@ -27,15 +28,30 @@ button:hover {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: start;
+    position: relative;
 }
 .description {
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
     margin: .5rem;
     padding: .5rem;
     cursor: grab;
     object-fit: contain;
     z-index: 1;
+    background-image: url(img/tag.png);
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+h1 {
+    color: #4a4b49;
+    margin-bottom: 0;
+}
+h2 {
+    padding-top: 54%;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    opacity: 0.7;
 }
 .animal-container {
     margin: .5rem;
@@ -48,6 +64,7 @@ button:hover {
     width: 12rem;
     height: 12rem;
     cursor: pointer;
+    mix-blend-mode: darken;
 }
 .modal {
     display: none;
@@ -88,51 +105,9 @@ button:hover {
 .left,
 .right {
     display: block;
-    width: 14rem;
+    width: 12rem;
 }
 
-#oink {
-    background: url(img/pig-text.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center 70%;
-}
-#woof {
-    background: url(img/dog-text.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center 70%;
-}
-#mau {
-    background: url(img/cat-text.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center 70%;
-}
-#ihaa {
-    background: url(img/horse-text.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center 70%;
-}
-#ihaa {
-    background: url(img/horse-text.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center 70%;
-}
-#mee {
-    background: url(img/sheep-text.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center 70%;
-}
-#muu {
-    background: url(img/cow-text.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center 70%;
-}
 
 .btns {
     display: flex;
