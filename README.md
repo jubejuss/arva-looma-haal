@@ -18,7 +18,7 @@ Meil on kasutusel hääle ja looma paarid.
   <img src="img/dog.jpg" alt="Koer" id="dog" class="animal" draggable="true">
 </div>
 ```
-![img/paar.png](paar)
+![paar](img/paar.png)
 
 Javascript hoolitseb selle eest, kui lohistatav element kukutatakse sihtpunkti ja ühe elemendi `data-` atribuut vastab teise elemendi `id`le, sellisel juhul käivitatakse funktsioonid, mis anavad meile tagasisidet – kas siis kiidetakse või öeldakse, et ei sobi.
 
