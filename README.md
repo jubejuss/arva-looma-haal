@@ -9,6 +9,7 @@ Põhiosa koosneb külgedel asuvatest loomade häälesiltidest ja keskel asuvates
 Meil on kasutusel hääle ja looma paarid.
 
 Ühe looma kohta käib järgnev paar:  
+![paar](img/paar.jpg)
 ```javascript
 <!-- Kirjeldus, mis esindab koera häält -->
 <div class="description" id="woof" data-animal="dog" draggable="true">
@@ -20,7 +21,6 @@ Meil on kasutusel hääle ja looma paarid.
   <img src="img/dog.jpg" alt="Koer" id="dog" class="animal">
 </div>
 ```
-![paar](img/paar.jpg)
 
 Javascript hoolitseb selle eest, kui lohistatav element kukutatakse sihtpunkti ja ühe elemendi `data-` atribuut vastab teise elemendi `id`le, sellisel juhul käivitatakse funktsioonid, mis anavad meile tagasisidet – kas siis kiidetakse või öeldakse, et ei sobi.  
 
