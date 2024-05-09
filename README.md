@@ -1,4 +1,5 @@
 # Hääle sobivasse kohta lohistamise mäng javascripti õppimiseks
+![eelvaade](/img/eelvaade.jpg)
 ## Kuidas see töötab?
 ### HTML
 Siinses HTML-is on kolm peamist sektsiooni – päis, mängu ala ja kontrollnupud.  
