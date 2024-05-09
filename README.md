@@ -1,5 +1,26 @@
 # Hääle sobivasse kohta lohistamise mäng javascripti õppimiseks
 ## Kuidas see töötab?
+### HTML
+Siinses HTML-is on kolme peamist sektsiooni – päis, mängu ala ja kontrollnupud.  
+Päises on lihtsalt pealkiri ja kirjeldus. Allosas on nupud, mille abil alglaadida mäng ja katkestada hääled ja keskel on põhiosa.  
+Põhiosa koosneb külgedel asuvatest loomade häälesiltidest ja keskel asuvatest loomade piltidest, millistele neid häälesilte lohistatakse.  
+Meil on kasutusel hääle ja looma paarid.
+
+Ühe looma kohta käib järgnev paar:  
+```javascript
+<!-- Kirjeldus, mis esindab koera häält -->
+<div class="description" id="woof" data-animal="dog" draggable="true">
+  Koera hääl
+</div>
+
+<!-- Koera pilt -->
+<div class="animal-container">
+  <img src="img/dog.jpg" alt="Koer" id="dog" class="animal" draggable="true">
+</div>
+```
+Javascript hoolitseb selle eest, kui lohistatav element kukutatakse sihtpunkti ja ühe elemendi `data-` atribuut vastab teise elemendi `id`le, sellisel juhul käivitatakse funktsioonid, mis anavad meile tagasisidet – kas siis kiidetakse või öeldakse, et ei sobi.
+
+
 ### Kood
 ```javascript
 document.addEventListener('DOMContentLoaded', function() {
