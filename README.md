@@ -9,7 +9,7 @@ Põhiosa koosneb külgedel asuvatest loomade häälesiltidest ja keskel asuvates
 Meil on kasutusel hääle ja looma paarid.
 
 Ühe looma kohta käib järgnev paar:  
-![paar](img/paar.jpg){:target="_blank"}
+![paar](img/paar.jpg)
 ```javascript
 <!-- Kirjeldus, mis esindab koera häält -->
 <div class="description" id="woof" data-animal="dog" draggable="true">
