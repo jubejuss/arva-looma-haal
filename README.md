@@ -15,16 +15,20 @@ Meil on kasutusel hääle ja looma paarid.
 
 <!-- Koera pilt -->
 <div class="animal-container">
-  <img src="img/dog.jpg" alt="Koer" id="dog" class="animal" draggable="true">
+  <img src="img/dog.jpg" alt="Koer" id="dog" class="animal">
 </div>
 ```
 ![paar](img/paar.jpg)
 
-Javascript hoolitseb selle eest, kui lohistatav element kukutatakse sihtpunkti ja ühe elemendi `data-` atribuut vastab teise elemendi `id`le, sellisel juhul käivitatakse funktsioonid, mis anavad meile tagasisidet – kas siis kiidetakse või öeldakse, et ei sobi.
+Javascript hoolitseb selle eest, kui lohistatav element kukutatakse sihtpunkti ja ühe elemendi `data-` atribuut vastab teise elemendi `id`le, sellisel juhul käivitatakse funktsioonid, mis anavad meile tagasisidet – kas siis kiidetakse või öeldakse, et ei sobi.  
 
+`id` on HTML-is elemendi unikaalne identifikaator.  `data-` atribuudid võimaldavad HTML dokumentidesse lisada struktureeritud andmeid, mida saab hiljem JavaScriptiga kätte saada. 
+
+Kogu töö seisneb selles, et me kasutame erinevaid päringuid, et teada saada, kus on mingi klassi või id-ga identifitseeritavad elemendid ning seejärel, vastavalt meie tegevusele käivitame kindlat tüüpi funktsioonid.
 
 ### Kood
 ```javascript
+//seadistame elemendid nii, et esimest gruppi saab lohistada ja teisele saab need esimesed nö pähe kukutada – loeme sisse kogu DOM'i, siis pärime vastavate klassidega elemendid ja lisame neile vastava seadistuse.
 document.addEventListener('DOMContentLoaded', function() {
     // Lisame lohistamise kuulajad kirjeldustele
     document.querySelectorAll('.description').forEach(item => {
@@ -32,14 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('dragend', dragEnd);
     });
 
-    // Lisame kukutamis- ja lohistamisülekuulamise kuulajad loomadele ja nende konteineritele
+    // Lisame kukutamise kuulajad loomadele ja nende konteineritele
     document.querySelectorAll('.animal, .animal-container').forEach(container => {
         container.addEventListener('dragover', dragOver);
         container.addEventListener('drop', drop);
     });
 });
 
-// Funktsioon, mis käivitatakse lohistamise alguses
+// Funktsioon, mis käivitatakse lohistamise alguses. Me võtame id nimetuse lihtsa vormindamata tekstina.
 function dragStart(event) {
     event.dataTransfer.setData("text/plain", event.target.id);  // Salvestame lohistatava elemendi ID
 }
@@ -51,16 +55,17 @@ function dragEnd(event) {
 
 // Funktsioon, mis käivitatakse elementi lohistades üle mõne potentsiaalse sihtelemendi
 function dragOver(event) {
-    event.preventDefault();  // Võimaldame elemendi kukutamist
+    event.preventDefault();  // Blokeerime vaikimisi käitumise, mis keelaks kukutamise
 }
 
-// Funktsioon, mis käivitatakse lohistatud elemendi kukutamisel sihtelemendile
+// Funktsioon, mis käivitatakse lohistatud elemendi kukutamisel sihtelemendile. Prevent default lubab kukutada.
 function drop(event) {
     event.preventDefault();
-    const descriptionId = event.dataTransfer.getData("text");
-    const description = document.getElementById(descriptionId);
+    const descriptionId = event.dataTransfer.getData("text"); //saame kätte dragstart ajal salvestatud andmed
+    const description = document.getElementById(descriptionId); //Küsime samanimelist ID-d HTML-ist
 
     // Määrame sihtelemendi, kontrollides, kas kukutati looma pildile või konteinerile
+    // Me tahame teada, kas lohistatud hääl kukkus spetsiaalsesse konteinerisse, mis on ette nähtud loomadele (märgitud klassiga animal-container). 
     let targetElement = event.target;
     while (targetElement && !targetElement.classList.contains('animal-container')) {
         targetElement = targetElement.parentNode;  // Liigume üles DOM puus, kuni leiame õige konteineri
@@ -72,6 +77,13 @@ function drop(event) {
 
     const animalImg = targetElement.querySelector('.animal');  // Leiame looma pildi konteinerist
     if (description.dataset.animal === animalImg.id) {
+        // Küsime mõõdud ja asukoha:
+        // getBoundingClientRect() on JavaScripti meetod, mis tagastab elemendi suuruse ja selle 
+        // positsiooni suhtes viewport'ile (st brauseri aknale, milles lehekülg on avatud). See annab
+        // meile objekti, mis sisaldab väärtused top, left, right, bottom, width ja height.
+        // targetRect saab mõõtmed ja asukoha looma pildi elemendilt (animalImg), mida kasutaja just valis.
+        // containerRect saab mõõtmed ja asukoha mänguala konteinerilt (game-area), 
+        // mis on tõenäoliselt suurem ala, kus kõik loomad ja nende kirjeldused asuvad.
         const targetRect = animalImg.getBoundingClientRect();
         const containerRect = document.getElementById('game-area').getBoundingClientRect();
         description.style.position = 'absolute';
@@ -106,7 +118,7 @@ function playSound(animal) {
     }
 }
 
-// Funktsioon modaalkasti näitamiseks koos sõnumiga
+// Funktsioon modaalkasti näitamiseks koos sõnumiga – display:none asendatakse display:flex'ga
 function showModal(message) {
     const modal = document.getElementById('modal');
     document.getElementById('modal-message').innerText = message;
@@ -118,22 +130,22 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-// Funktsioon heli peatamiseks
+// Sisseehitatud funktsioon heli peatamiseks
 function stopSound() {
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
+    if (currentAudio) { // kontrollib, kas heli mängib
+        currentAudio.pause(); // paneb seisma
+        currentAudio.currentTime = 0; // kerib algusse
     }
 }
 
 // Funktsioon algse paigutuse taastamiseks
 function resetPositions() {
     document.querySelectorAll('.description').forEach(item => {
-        item.style.position = 'static';  // Taastame kirjelduste algse paigutuse
+        item.style.position = 'static';  // Taastame kirjelduste algse paigutuse – position:static
     });
 }
 
-// Globaalne muutuja heli haldamiseks
+// Globaalne muutuja heli haldamiseks, ei oma alguses mingit väärtust
 let currentAudio = null;
 
 // Klikk ükskõik kus aknas sulgeb modaalkasti
