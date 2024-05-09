@@ -1,5 +1,6 @@
 # Hääle sobivasse kohta lohistamise mäng javascripti õppimiseks
 ![eelvaade](/img/eelvaade.jpg)
+[Mängu töötav versioon](https://jubejuss.github.io/arva-looma-haal/)
 ## Kuidas see töötab?
 ### HTML
 Siinses HTML-is on kolm peamist sektsiooni – päis, mängu ala ja kontrollnupud.  
