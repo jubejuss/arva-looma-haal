@@ -69,7 +69,8 @@ function drop(event) {
     const description = document.getElementById(descriptionId); //Küsime samanimelist ID-d HTML-ist
 
     // Määrame sihtelemendi, kontrollides, kas kukutati looma pildile või konteinerile
-    // Me tahame teada, kas lohistatud hääl kukkus spetsiaalsesse konteinerisse, mis on ette nähtud loomadele (märgitud klassiga animal-container). 
+    // Me tahame teada, kas lohistatud hääl kukkus spetsiaalsesse konteinerisse,
+    // mis on ette nähtud loomadele (märgitud klassiga animal-container). 
     let targetElement = event.target;
     while (targetElement && !targetElement.classList.contains('animal-container')) {
         targetElement = targetElement.parentNode;  // Liigume üles DOM puus, kuni leiame õige konteineri
