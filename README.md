@@ -5,6 +5,7 @@
 ### HTML
 Siinses HTML-is on kolm peamist sektsiooni – päis, mängu ala ja kontrollnupud.  
 Päises on lihtsalt pealkiri ja kirjeldus. Allosas on nupud, mille abil alglaadida mäng ning katkestada hääled ja keskel on mänguosa.  
+
 Mänguosa koosneb külgedel asuvatest loomade häälesiltidest ja keskel asuvatest loomade piltidest, millistele neid häälesilte lohistatakse.  
 
 Meil on kasutusel hääle ja looma paarid.  
