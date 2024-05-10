@@ -4,7 +4,7 @@
 ## Kuidas see töötab?
 ### HTML
 Siinses HTML-is on kolm peamist sektsiooni – päis, mängu ala ja kontrollnupud.  
-Päises on lihtsalt pealkiri ja kirjeldus. Allosas on nupud, mille abil alglaadida mäng ning katkestada hääled ja keskel on mänguosa.  
+Päises on lihtsalt pealkiri ja kirjeldus. Allosas on nupud, mille abil alglaadida mäng ning katkestada hääled ja keskel on mänguosa. Lisaks on meil lehel ka peidus olevad modaalid, mis kuvatakse teadetena kui kindlate tegevuste tagajärjel. 
 
 Mänguosa koosneb külgedel asuvatest loomade häälesiltidest ja keskel asuvatest loomade piltidest, millistele neid häälesilte lohistatakse.  
 
