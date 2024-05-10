@@ -1,5 +1,7 @@
 # Hääle sobivasse kohta lohistamise mäng javascripti õppimiseks
 
+## Kui veebilehel kuhugi vajutada ja seejärel midagi kummalist juhtub, võib kahtlustada, et mängus on javascript
+
 ![eelvaade](/img/eelvaade.jpg)
 [Mängu töötav versioon](https://jubejuss.github.io/arva-looma-haal/)  
 
