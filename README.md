@@ -157,7 +157,8 @@ window.onclick = function(event) {
     }
 }
 ```
-Lisalugemist javascripti `drag` funktsioonidega tutvumiseks [leiab siit](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event)
+Lisalugemist javascripti `drag` funktsioonidega tutvumiseks [leiab siit](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event) ja [siit](https://developer.mozilla.org/en-US/play)  
+Mõõtude hankimisega [seotud funktsioonid](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 
 ### Mida miski koodijupp teeb?
 `document.addEventListener('DOMContentLoaded', function() { ... });` - See käivitab funktsiooni, kui HTML-dokument on täielikult laaditud ja parsitud.  
