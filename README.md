@@ -1,6 +1,9 @@
 # Hääle sobivasse kohta lohistamise mäng javascripti õppimiseks
 ![eelvaade](/img/eelvaade.jpg)
-[Mängu töötav versioon](https://jubejuss.github.io/arva-looma-haal/)
+[Mängu töötav versioon](https://jubejuss.github.io/arva-looma-haal/)  
+
+Graafika on loodud Microsoft Gopiliiloti abil, kasutades DALL-E ai-d.
+
 ## Kuidas see töötab?
 ### HTML
 Siinses HTML-is on kolm peamist sektsiooni – päis, mängu ala ja kontrollnupud.  
