@@ -160,6 +160,19 @@ window.onclick = function(event) {
     }
 }
 ```
+Momendil on mängu alglaadimise, helide vaigistamiSe ja modaalide sulgemise funktsioonide käivitatajad HTML-is:
+```javascript
+<button id="stop-all-sounds" onclick="stopSound()">
+```
+Kuid need võivad asuda samuti javascripti failis:
+```javascript
+    const stopButton = document.getElementById('stop-all-sounds');
+    if (stopButton) {
+        stopButton.addEventListener('click', stopSound);
+    }
+```
+
+
 Lisalugemist javascripti `drag` funktsioonidega tutvumiseks [leiab siit](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event) ja [siit](https://developer.mozilla.org/en-US/play)  
 Mõõtude hankimisega [seotud funktsioonid](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 
