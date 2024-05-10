@@ -157,6 +157,8 @@ window.onclick = function(event) {
     }
 }
 ```
+Lisalugemist javascripti `drag` funktsioonidega tutvumiseks [leiab siit](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/drag_event)
+
 ### Mida miski koodijupp teeb?
 `document.addEventListener('DOMContentLoaded', function() { ... });` - See käivitab funktsiooni, kui HTML-dokument on täielikult laaditud ja parsitud.  
 `document.querySelectorAll('.description').forEach(item => { ... });` - See valib kõik elemendid, millel on klass "description", ja rakendab igaühele sündmuskuulajaid.  
