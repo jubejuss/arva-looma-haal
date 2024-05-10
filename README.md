@@ -2,7 +2,7 @@
 ![eelvaade](/img/eelvaade.jpg)
 [Mängu töötav versioon](https://jubejuss.github.io/arva-looma-haal/)  
 
-Graafika on loodud Microsoft Gopiliiloti abil, kasutades DALL-E ai-d.
+Graafika on loodud Microsoft Gopiloti abil, kasutades DALL-E ai-d. Koodiabi: stackoverflow.com, developer.mozilla.org, w3schools.com ChatGPT. Helid – tasuta helipangad.
 
 ## Kuidas see töötab?
 ### HTML
