@@ -4,11 +4,11 @@
 ## Kuidas see töötab?
 ### HTML
 Siinses HTML-is on kolm peamist sektsiooni – päis, mängu ala ja kontrollnupud.  
-Päises on lihtsalt pealkiri ja kirjeldus. Allosas on nupud, mille abil alglaadida mäng ja katkestada hääled ja keskel on põhiosa.  
-Põhiosa koosneb külgedel asuvatest loomade häälesiltidest ja keskel asuvatest loomade piltidest, millistele neid häälesilte lohistatakse.  
-Meil on kasutusel hääle ja looma paarid.
+Päises on lihtsalt pealkiri ja kirjeldus. Allosas on nupud, mille abil alglaadida mäng ning katkestada hääled ja keskel on mänguosa.  
+Mänguosa koosneb külgedel asuvatest loomade häälesiltidest ja keskel asuvatest loomade piltidest, millistele neid häälesilte lohistatakse.  
 
-Ühe looma kohta käib järgnev paar:  
+Meil on kasutusel hääle ja looma paarid.  
+Ühe looma kohta käib näiteks järgnev paar:  
 ![paar](img/paar.jpg)
 ```javascript
 <!-- Kirjeldus, mis esindab koera häält -->
@@ -22,11 +22,11 @@ Meil on kasutusel hääle ja looma paarid.
 </div>
 ```
 
-Javascript hoolitseb selle eest, kui lohistatav element kukutatakse sihtpunkti ja ühe elemendi `data-` atribuut vastab teise elemendi `id`le, sellisel juhul käivitatakse funktsioonid, mis anavad meile tagasisidet – kas siis kiidetakse või öeldakse, et ei sobi.  
+Javascript hoolitseb selle eest, et kui lohistatav element kukutatakse sihtpunkti ja ühe elemendi `data-` atribuut vastab teise elemendi `id`le, siis käivitatakse funktsioonid, mis anavad meile tagasisidet. Siinse mängu puhul siis kiidetakse ja käivitatakse sobiva looma hääl või öeldakse, et ei sobi.  
 
 `id` on HTML-is elemendi unikaalne identifikaator.  `data-` atribuudid võimaldavad HTML dokumentidesse lisada struktureeritud andmeid, mida saab hiljem JavaScriptiga kätte saada. 
 
-Kogu töö seisneb selles, et me kasutame erinevaid päringuid, et teada saada, kus on mingi klassi või id-ga identifitseeritavad elemendid ning seejärel, vastavalt meie tegevusele käivitame kindlat tüüpi funktsioonid.
+Kogu mängu sisu seisneb selles, et me kasutame erinevaid päringuid, et teada saada, kus on mingi klassi või id-ga identifitseeritavad elemendid ning seejärel, vastavalt meie tegevusele käivitatakse kindlat tüüpi funktsioonid.
 
 ### Kood
 ```javascript
