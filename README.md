@@ -31,7 +31,8 @@ Kogu mängu sisu seisneb selles, et me kasutame erinevaid päringuid, et teada s
 
 ### Kood
 ```javascript
-//seadistame elemendid nii, et esimest gruppi saab lohistada ja teisele saab need esimesed nö pähe kukutada – loeme sisse kogu DOM'i, siis pärime vastavate klassidega elemendid ja lisame neile vastava seadistuse.
+// seadistame elemendid nii, et esimest gruppi saab lohistada ja teisele saab need esimesed nö pähe kukutada – 
+// loeme sisse kogu DOM'i, siis pärime vastavate klassidega elemendid ja lisame neile vastava seadistuse.
 document.addEventListener('DOMContentLoaded', function() {
     // Lisame lohistamise kuulajad kirjeldustele
     document.querySelectorAll('.description').forEach(item => {
